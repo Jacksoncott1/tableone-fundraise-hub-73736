@@ -35,14 +35,14 @@ const RevenueChart: React.FC = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-4xl mb-4 text-gradient-metallic font-sfpro font-medium" style={{ letterSpacing: '-0.5px' }}>
-            Our Revenue Growth Journey
-          </h2>
-          <p className="text-base max-w-2xl mx-auto text-[#8E8E93] font-sfpro">
-            Consistent month-over-month growth as we expand our subscriber base.
-          </p>
-        </div>
+      <div className="text-center mb-8">
+        <h2 className="text-2xl md:text-4xl mb-4 text-gradient-metallic font-sfpro font-medium" style={{ letterSpacing: '-0.5px' }}>
+          Our Player Performance Journey
+        </h2>
+        <p className="text-base max-w-2xl mx-auto text-[#8E8E93] font-sfpro">
+          Consistent improvement in decision-making accuracy and profit rate for gamblers coached by Gamble AI.
+        </p>
+      </div>
 
         <div className="glass-card backdrop-blur-xl bg-white/5 border border-white/10 shadow-xl p-6 md:p-8 max-w-5xl mx-auto">
           <RevenueHeader 

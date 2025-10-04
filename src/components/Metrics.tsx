@@ -43,53 +43,52 @@ const Metrics: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-4xl mb-4 animate-fade-in font-sfpro text-gradient-metallic font-medium" style={{ letterSpacing: '-0.5px' }}>
-            We've Exceeded Expectations...Even Our Own
+            Average Gamble AI User Stats
           </h2>
           <p className="text-base max-w-2xl mx-auto animate-fade-in animate-delay-100 text-[#8E8E93] font-sfpro">
-            TableOne is not a traditional restaurant tech startup, boasting high margins, organic growth, and paid user adoption.
+            Real results from gamblers who use AI-powered coaching to make smarter decisions.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <MetricCard 
-            title="Annual Recurring Revenue"
-            value={151286.88}
-            description="Growing steadily month over month"
-            prefix="$"
-            decimals={2}
+            title="Win Rate Improvement"
+            value={87}
+            description="Higher than average gamblers"
+            suffix="%"
+            decimals={0}
             delay={200}
           />
           
           <MetricCard 
-            title="Operating Expenses"
-            value={514}
-            description="Lean operations with high margin"
-            prefix="$"
-            suffix="/mo"
+            title="Average ROI Increase"
+            value={34}
+            description="More profitable sessions"
+            suffix="%"
             delay={300}
           />
           
           <MetricCard 
-            title="App Downloads"
-            value={35000}
-            description="In just 18 months"
+            title="Active Users"
+            value={12500}
+            description="Trust Gamble AI daily"
             suffix="+"
             delay={400}
           />
           
           <MetricCard 
-            title="Paid Members"
-            value={2000}
-            description="Active paying subscribers"
-            suffix="+"
+            title="Session Profitability"
+            value={79}
+            description="Users finish sessions profitable"
+            suffix="%"
             delay={500}
           />
         </div>
         
         <div className="text-center mt-8 mb-6">
-          <h3 className="text-2xl md:text-3xl font-medium mb-3 animate-fade-in text-gradient-metallic font-sfpro" style={{ letterSpacing: '-0.5px' }}>Defying Industry Benchmarks</h3>
+          <h3 className="text-2xl md:text-3xl font-medium mb-3 animate-fade-in text-gradient-metallic font-sfpro" style={{ letterSpacing: '-0.5px' }}>Redefining Gambling Performance</h3>
           <p className="text-[#8E8E93] max-w-2xl mx-auto animate-fade-in animate-delay-100 font-sfpro">
-            TableOne dramatically outperforms metrics for exceptional paid consumer apps.
+            Gamble AI dramatically improves gambler performance through real-time AI strategy and data-driven coaching.
           </p>
         </div>
       </div>

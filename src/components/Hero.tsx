@@ -6,7 +6,8 @@ import { HashLink } from 'react-router-hash-link';
 import InvestmentDialog from './funding/InvestmentDialog';
 import RedirectDialog from './funding/RedirectDialog';
 
-import appAndCards from '../assets/app-and-cards.png'
+import gambleAiPhones from '../assets/gamble-ai-phones.png'
+import scienceBadge from '../assets/science-based-badge.png'
 
 const Hero: React.FC = () => {
   const [isInvestmentDialogOpen, setIsInvestmentDialogOpen] = useState(false);
@@ -38,49 +39,43 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <div className="rounded-full glass backdrop-blur-md bg-white/5 border border-white/10 px-5 py-2 mb-10 opacity-0 animate-[fadeIn_0.8s_ease_forwards] shadow-lg hover:bg-white/10 transition-all duration-300" style={{ animationDelay: '0.4s' }}>
-            <span className="text-xs font-medium text-white/90 font-sfpro tracking-wide">Raising from Our Community to Continue Redefining Restaurant Reservations</span>
+            <img src={scienceBadge} alt="#1 Science Based Gambling App" className="h-8 md:h-10" />
           </div>
 
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-medium mb-6 opacity-0 animate-[fadeIn_0.8s_ease_forwards] leading-[1.1] font-sfpro text-gradient-metallic" style={{ animationDelay: '0.6s', letterSpacing: '-0.5px' }}>
-            Platinum Card Dining,<br />
+            AI Gambling Assistant<br />
             <span className="font-sfpro">
-              <span 
+              That <span 
                 className="permanent-marker-regular" 
                 style={{ 
                   fontWeight: '400', 
                 }}
               >
-                Without</span>&nbsp; The Card
+                Thinks</span>&nbsp; For You
             </span>
           </h1>
 
           <div className="w-full max-w-md mb-8 opacity-0 animate-[fadeIn_0.8s_ease_forwards] relative" style={{ animationDelay: '0.7s' }}>
-            <div className="absolute inset-x-0 bottom-0 h-3/4 from-background via-background/90 to-transparent z-10"></div>
             <img
-              src={appAndCards}
-              alt="TableOne App with Premium Cards"
+              src={gambleAiPhones}
+              alt="Gamble AI App Interface"
               className="w-full h-auto drop-shadow-2xl relative z-0"
             />
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 opacity-0 animate-[fadeIn_0.8s_ease_forwards]" style={{ animationDelay: '1s' }}>
-            <button
-              onClick={handleInvestClick}
+            <a
+              href="https://apps.apple.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-7 py-3 rounded-full font-medium bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white transition-all duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:-translate-y-1 text-sm font-sfpro"
             >
-              Invest via Wefunder
-            </button>
-            <HashLink
-              to="#metrics"
-              smooth
-              className="px-7 py-3 rounded-full font-medium bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm font-sfpro"
-            >
-              See Our Metrics
-            </HashLink>
+              Download for iOS
+            </a>
           </div>
 
           <div className="mt-12 opacity-0 animate-[fadeIn_0.8s_ease_forwards]" style={{ animationDelay: '1.2s' }}>
-            <HashLink smooth to="#videoStory" className="w-10 h-10 flex justify-center items-center rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 hover:scale-110 animate-bounce-subtle">
+            <HashLink smooth to="#about" className="w-10 h-10 flex justify-center items-center rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 hover:scale-110 animate-bounce-subtle">
               <ArrowDown size={16} className="text-white/60" />
             </HashLink>
           </div>

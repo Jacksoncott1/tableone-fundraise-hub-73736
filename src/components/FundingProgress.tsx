@@ -24,23 +24,25 @@ const FundingProgress: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-4xl font-medium mb-4 animate-fade-in text-gradient-metallic tracking-tight" style={{ letterSpacing: '-0.5px' }}>
-            Invest in our Journey
+            Start Your Journey
           </h2>
           <p className="text-base md:text-lg text-[#8E8E93] max-w-2xl mx-auto animate-fade-in animate-delay-100 font-sfpro">
-            We are raising this round on Wefunder via SAFEs with a $4mm post-money valuation cap.
+            It's time to make the best decision of your gambling life. Join thousands of winners using AI to gain the edge.
           </p>
         </div>
         
         <div className="text-center mt-8">
-          <button 
-            onClick={handleInvestClick}
-            className="inline-block px-6 py-3 rounded-full font-medium bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white transition-all duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:translate-y-[-2px] text-sm"
-          >
-            Invest via Wefunder
-          </button>
-          <p className="mt-3 text-white/60 text-xs">
-            Minimum investment: $500
-          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="https://apps.apple.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 rounded-full font-medium bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white transition-all duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:translate-y-[-2px] text-sm"
+            >
+              Download for iOS
+            </a>
+            <span className="text-white/60 text-sm">Android coming soon</span>
+          </div>
         </div>
       </div>
       

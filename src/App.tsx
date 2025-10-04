@@ -8,6 +8,7 @@ import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import IPBlocker from "./components/IPBlocker";
 import Index from "./pages/Index";
+import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
@@ -25,6 +26,7 @@ const App = () => (
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/resources" element={<Resources />} />
               <Route path="/login" element={<Login />} />
               <Route path="/investment-success" element={<InvestmentSuccess />} />
               <Route path="/admin" element={

@@ -67,32 +67,38 @@ const NavBar: React.FC = () => {
 			<div className="container mx-auto flex justify-between items-center">
 				<div className="flex items-center space-x-2">
 					<img
-						src="/lovable-uploads/4329a76b-4372-4945-8827-e8e0265d3913.png"
-						alt="TableOne Logo"
+						src="/src/assets/gambleai-logo.png"
+						alt="Gamble AI Logo"
 						className="h-4 md:h-5 transition-all duration-300 hover:opacity-80"
 					/>
 				</div>
 				<div className="hidden md:flex space-x-12">
 					<HashLink smooth to="/#metrics" className="text-xs font-medium text-white/80 hover:text-white transition-all duration-300 relative group px-1 font-sfpro">
-						Metrics
+						Features
 						<span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
 					</HashLink>
-					<HashLink smooth to="#roadmap" className="text-xs font-medium text-white/80 hover:text-white transition-all duration-300 relative group px-1 font-sfpro">
-						Roadmap
+					<HashLink smooth to="/#roadmap" className="text-xs font-medium text-white/80 hover:text-white transition-all duration-300 relative group px-1 font-sfpro">
+						What We Do
 						<span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
 					</HashLink>
-					<HashLink smooth to="#expansion" className="text-xs font-medium text-white/80 hover:text-white transition-all duration-300 relative group px-1 font-sfpro">
-						Expansion
+					<HashLink smooth to="/#expansion" className="text-xs font-medium text-white/80 hover:text-white transition-all duration-300 relative group px-1 font-sfpro">
+						Games
+						<span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+					</HashLink>
+					<HashLink smooth to="/resources" className="text-xs font-medium text-white/80 hover:text-white transition-all duration-300 relative group px-1 font-sfpro">
+						Resources
 						<span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
 					</HashLink>
 				</div>
 				<div className="flex items-center space-x-2">
-					<button
-						onClick={handleInvestClick}
+					<a
+						href="https://apps.apple.com"
+						target="_blank"
+						rel="noopener noreferrer"
 						className="px-4 py-1.5 text-xs rounded-full font-medium bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white transition-all duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:-translate-y-0.5 font-sfpro"
 					>
-						Invest via Wefunder
-					</button>
+						Download
+					</a>
 				</div>
 			</div>
 		</nav>

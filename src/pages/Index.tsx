@@ -2,13 +2,13 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
-import VideoStory from '../components/VideoStory';
+import WhatIsGambleAI from '../components/WhatIsGambleAI';
 import FeaturedIn from '../components/FeaturedIn';
 import Metrics from '../components/Metrics';
 import Benchmarks from '../components/Benchmarks';
-import Roadmap from '../components/Roadmap';
+import CoreFeatures from '../components/CoreFeatures';
 import RevenueChart from '../components/RevenueChart';
-import CityMap from '../components/CityMap';
+import GameExpansion from '../components/GameExpansion';
 import FundingProgress from '../components/FundingProgress';
 
 const Index: React.FC = () => {
@@ -16,13 +16,13 @@ const Index: React.FC = () => {
     <div className="min-h-screen">
       <NavBar />
       <Hero />
-      <VideoStory />
+      <WhatIsGambleAI />
       <FeaturedIn />
       <Metrics />
       <Benchmarks />
-      <Roadmap />
+      <CoreFeatures />
       <RevenueChart />
-      <CityMap />
+      <GameExpansion />
       <FundingProgress />
       
       <footer className="py-8 border-t border-white/10">
@@ -30,13 +30,13 @@ const Index: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0 flex items-center">
               <img 
-                src="/lovable-uploads/4329a76b-4372-4945-8827-e8e0265d3913.png" 
-                alt="TableOne Logo" 
+                src="/src/assets/gambleai-logo.png" 
+                alt="Gamble AI Logo" 
                 className="h-6 md:h-8 mr-2"
               />
             </div>
             <div className="text-white/60 text-sm">
-              © {new Date().getFullYear()} TableOne. All rights reserved.
+              © {new Date().getFullYear()} Gamble AI. All rights reserved.
             </div>
           </div>
         </div>

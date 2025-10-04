@@ -56,14 +56,14 @@ const BenchmarkItem: React.FC<BenchmarkProps> = ({
       
       <div className="mb-6">
         <div className="flex justify-between items-center mb-2">
-          <span className="text-white/70 text-xs">TableOne</span>
+          <span className="text-white/70 text-xs">Gamble AI Users</span>
           <span className="text-white text-xs font-medium">
             <CountUp end={tableOneValue} suffix="%" delay={0} />
           </span>
         </div>
         <div className="w-full bg-white/10 rounded-full h-2">
           <div 
-            className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
+            className="bg-gradient-to-r from-green-400 to-emerald-500 h-2 rounded-full shadow-lg shadow-green-500/30"
             style={{ width: `${tableOneValue}%`, transition: 'width 2s ease-in-out' }}
           ></div>
         </div>
@@ -71,14 +71,14 @@ const BenchmarkItem: React.FC<BenchmarkProps> = ({
       
       <div className="mb-4">
         <div className="flex justify-between items-center mb-2">
-          <span className="text-white/70 text-xs">Industry Benchmark</span>
+          <span className="text-white/70 text-xs">Average Gambler</span>
           <span className="text-white/70 text-xs">
             <CountUp end={benchmarkValue} suffix="%" delay={0} />
           </span>
         </div>
         <div className="w-full bg-white/10 rounded-full h-2">
           <div 
-            className="bg-white/30 h-2 rounded-full"
+            className="bg-gradient-to-r from-red-900/50 to-gray-700/50 h-2 rounded-full"
             style={{ width: `${benchmarkValue}%`, transition: 'width 2s ease-in-out' }}
           ></div>
         </div>
@@ -94,26 +94,26 @@ const Benchmarks: React.FC = () => {
     <div className="container mx-auto px-4 pb-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <BenchmarkItem
-          title="Paid User Retention"
-          tableOneValue={89}
-          benchmarkValue={40}
-          description="Our subscribers stay loyal far beyond industry standards."
+          title="Win Rate Improvement"
+          tableOneValue={87}
+          benchmarkValue={42}
+          description="Users guided by AI make statistically smarter decisions."
           delay={200}
         />
         
         <BenchmarkItem
-          title="Conversion Rate"
-          tableOneValue={38.7}
-          benchmarkValue={5}
-          description="Users see our value and are eager to subscribe."
+          title="Loss Reduction"
+          tableOneValue={88}
+          benchmarkValue={52}
+          description="AI users minimize losses through calculated betting patterns."
           delay={300}
         />
         
         <BenchmarkItem
-          title="Organic Acquisition"
-          tableOneValue={98}
-          benchmarkValue={75}
-          description="Near zero customer acquisition cost with high word of mouth."
+          title="Session Profitability"
+          tableOneValue={79}
+          benchmarkValue={33}
+          description="Most Gamble AI users finish sessions profitable within 2 days."
           delay={400}
         />
       </div>
