@@ -7,19 +7,21 @@ import {
   YAxis, 
   CartesianGrid, 
   Tooltip, 
-  ResponsiveContainer 
+  ResponsiveContainer,
+  Legend 
 } from 'recharts';
 
 interface ChartData {
   name: string;
-  value: number;
+  gambleAI: number;
+  average: number;
 }
 
-interface LifetimeValueChartProps {
+interface WinRateChartProps {
   data: ChartData[];
 }
 
-const LifetimeValueChart: React.FC<LifetimeValueChartProps> = ({ data }) => {
+const WinRateChart: React.FC<WinRateChartProps> = ({ data }) => {
   return (
     <>
       <div className="h-[300px]">
@@ -35,30 +37,41 @@ const LifetimeValueChart: React.FC<LifetimeValueChartProps> = ({ data }) => {
               tickFormatter={(value) => `${value}%`}
             />
             <Tooltip 
-              formatter={(value) => [`${value}%`, "Decision Accuracy"]}
+              formatter={(value) => [`${value}%`, '']}
               contentStyle={{
                 backgroundColor: 'rgba(15, 23, 42, 0.9)',
                 border: '1px solid rgba(255,255,255,0.1)',
                 borderRadius: '0.5rem',
               }}
             />
+            <Legend />
             <Line 
               type="monotone" 
-              dataKey="value" 
-              name="Decision Accuracy" 
+              dataKey="gambleAI" 
+              name="Gamble AI Users" 
               stroke="#05d9a7" 
               strokeWidth={3}
               activeDot={{ r: 8 }} 
               dot={{ r: 4 }}
             />
+            <Line 
+              type="monotone" 
+              dataKey="average" 
+              name="Average Gamblers" 
+              stroke="#ea384c" 
+              strokeWidth={3}
+              activeDot={{ r: 8 }} 
+              dot={{ r: 4 }}
+              strokeDasharray="5 5"
+            />
           </LineChart>
         </ResponsiveContainer>
       </div>
       <div className="mt-4 text-center gradient-subheading">
-        <p>AI decision accuracy reaching 94% in March 2025</p>
+        <p>Gamble AI users maintain 87% win rate vs 42% average</p>
       </div>
     </>
   );
 };
 
-export default LifetimeValueChart;
+export default WinRateChart;

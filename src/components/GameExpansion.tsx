@@ -3,14 +3,14 @@ import React from 'react';
 import { Sparkles, Clock, Boxes } from 'lucide-react';
 
 interface GameCardProps {
-  game: string;
+  title: string;
   description: string;
   status: 'live' | 'soon' | 'planned';
   metric?: string;
   delay: number;
 }
 
-const GameCard: React.FC<GameCardProps> = ({ game, description, status, metric, delay }) => {
+const GameCard: React.FC<GameCardProps> = ({ title, description, status, metric, delay }) => {
   const getStatusColor = () => {
     switch (status) {
       case 'live':
@@ -58,7 +58,7 @@ const GameCard: React.FC<GameCardProps> = ({ game, description, status, metric, 
       <div className="relative z-10">
         {getStatusBadge()}
         
-        <h3 className="text-xl font-semibold mb-2 text-white font-sfpro">{game}</h3>
+        <h3 className="text-xl font-semibold mb-2 text-white font-sfpro">{title}</h3>
         <p className="text-white/70 text-sm leading-relaxed mb-3 font-sfpro">{description}</p>
         
         {metric && (
@@ -90,7 +90,7 @@ const GameExpansion: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <GameCard
-            game="Poker"
+            title="Poker"
             description="Real-time hand analysis and AI-backed odds coaching for optimal decision-making."
             status="live"
             metric="+22% avg ROI improvement"
@@ -98,7 +98,7 @@ const GameExpansion: React.FC = () => {
           />
           
           <GameCard
-            game="Blackjack"
+            title="Blackjack"
             description="Dynamic probability tracking and bet optimization engine for maximum edge."
             status="live"
             metric="Poker AI accuracy: 94.3%"
@@ -106,38 +106,31 @@ const GameExpansion: React.FC = () => {
           />
           
           <GameCard
-            game="Sports Betting"
+            title="Sports Betting"
             description="Predictive algorithms trained on real market odds and comprehensive player data."
             status="soon"
             delay={300}
           />
           
           <GameCard
-            game="Roulette"
+            title="Roulette"
             description="Spin probability modeling and outcome visualization engine for strategic betting."
             status="soon"
             delay={400}
           />
           
           <GameCard
-            game="Baccarat"
+            title="Baccarat"
             description="High-precision pattern recognition models for sophisticated gameplay."
             status="planned"
             delay={500}
           />
           
           <GameCard
-            game="Fantasy Markets"
+            title="Fantasy Markets"
             description="AI-driven prediction systems for virtual betting and esports competitions."
             status="planned"
             delay={600}
-          />
-          
-          <GameCard
-            game="Craps & Slots"
-            description="Long-term bankroll management and outcome simulation training systems."
-            status="planned"
-            delay={700}
           />
         </div>
       </div>

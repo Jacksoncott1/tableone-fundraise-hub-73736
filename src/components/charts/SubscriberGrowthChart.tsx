@@ -34,7 +34,7 @@ const SubscriberGrowthChart: React.FC<SubscriberGrowthChartProps> = ({ data }) =
               stroke="rgba(255,255,255,0.6)"
             />
             <Tooltip
-              formatter={(value) => [`${(value as number).toLocaleString()}`, 'Subscribers']}
+              formatter={(value) => [`${(value as number).toLocaleString()}`, 'Active Users']}
               contentStyle={{
                 backgroundColor: 'rgba(15, 23, 42, 0.9)',
                 border: '1px solid rgba(255,255,255,0.1)',
@@ -58,7 +58,7 @@ const SubscriberGrowthChart: React.FC<SubscriberGrowthChartProps> = ({ data }) =
         </ResponsiveContainer>
       </div>
       <div className="mt-4 text-center gradient-subheading">
-        <p>Subscriber growth to 2,031 active subscribers in 6 months</p>
+        <p>User growth to 2,031 active users in 6 months</p>
       </div>
     </>
   );

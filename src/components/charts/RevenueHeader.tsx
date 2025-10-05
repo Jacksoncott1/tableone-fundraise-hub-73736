@@ -11,19 +11,39 @@ const RevenueHeader: React.FC<RevenueHeaderProps> = ({ selectedChart }) => {
 
 	const getMetricDisplay = () => {
 		switch (selectedChart) {
-			case "arr":
+			case "winRate":
 				return {
-					title: "Current Annual Recurring Revenue",
-					value: "152,000",
-					prefix: "$",
-					suffix: "",
+					title: "Average Win Rate",
+					value: "87",
+					prefix: "",
+					suffix: "%",
 					decimals: 0,
 					color: "#05d9a7",
-					change: "+7.04%"
+					change: "+1.2%"
+				};
+			case "profitability":
+				return {
+					title: "Session Profitability",
+					value: "79",
+					prefix: "",
+					suffix: "%",
+					decimals: 0,
+					color: "#05d9a7",
+					change: "+1.3%"
+				};
+			case "accuracy":
+				return {
+					title: "AI Decision Accuracy",
+					value: "94",
+					prefix: "",
+					suffix: "%",
+					decimals: 0,
+					color: "#05d9a7",
+					change: "+2.2%"
 				};
 			case "growth":
 				return {
-					title: "Current Subscribers",
+					title: "Active Users",
 					value: "2,031",
 					prefix: "",
 					suffix: "",
@@ -31,35 +51,15 @@ const RevenueHeader: React.FC<RevenueHeaderProps> = ({ selectedChart }) => {
 					color: "#9b87f5",
 					change: "+21.1%"
 				};
-			case "ltv":
-				return {
-					title: "Current Lifetime Value",
-					value: 74.49,
-					prefix: "$",
-					suffix: "",
-					decimals: 2,
-					color: "#05d9a7",
-					change: "+23.3%"
-				};
-			case "churn":
-				return {
-					title: "Current Churn Rate",
-					value: "9.4",
-					prefix: "",
-					suffix: "%",
-					decimals: 1,
-					color: "#ea384c",
-					change: "-22.3%"
-				};
 			default:
 				return {
-					title: "Current Annual Recurring Revenue",
-					value: "152,000",
-					prefix: "$",
-					suffix: "",
+					title: "Average Win Rate",
+					value: "87",
+					prefix: "",
+					suffix: "%",
 					decimals: 0,
 					color: "#05d9a7",
-					change: "+7.04%"
+					change: "+1.2%"
 				};
 		}
 	};
