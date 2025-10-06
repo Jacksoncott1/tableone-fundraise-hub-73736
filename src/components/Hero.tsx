@@ -7,7 +7,6 @@ import InvestmentDialog from './funding/InvestmentDialog';
 import RedirectDialog from './funding/RedirectDialog';
 
 import gambleAiHero from '../assets/gamble-ai-hero.png'
-import scienceBadge from '../assets/science-based-badge.png'
 
 const Hero: React.FC = () => {
   const [isInvestmentDialogOpen, setIsInvestmentDialogOpen] = useState(false);
@@ -38,7 +37,7 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
-          <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-medium mb-14 opacity-0 animate-[fadeIn_0.8s_ease_forwards] leading-[1.1] font-sfpro text-gradient-metallic" style={{ animationDelay: '0.4s', letterSpacing: '-0.5px' }}>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-14 opacity-0 animate-[fadeIn_0.8s_ease_forwards] leading-[1.1] font-sfpro text-gradient-metallic" style={{ animationDelay: '0.4s', letterSpacing: '-0.5px' }}>
             AI Gambling Assistant<br />
             <span className="font-sfpro">
               That <span 
@@ -70,9 +69,6 @@ const Hero: React.FC = () => {
             </a>
           </div>
 
-          <div className="mb-12 opacity-0 animate-[fadeIn_0.8s_ease_forwards]" style={{ animationDelay: '1s' }}>
-            <img src={scienceBadge} alt="#1 Science Based Gambling App" className="h-48 md:h-56 lg:h-64 mx-auto" />
-          </div>
 
           <div className="mt-8 opacity-0 animate-[fadeIn_0.8s_ease_forwards]" style={{ animationDelay: '1.2s' }}>
             <HashLink smooth to="#about" className="w-10 h-10 flex justify-center items-center rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 hover:scale-110 animate-bounce-subtle">

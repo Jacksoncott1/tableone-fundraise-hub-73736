@@ -1,7 +1,15 @@
 
 import { createContext, useState, useEffect, useContext, ReactNode } from 'react';
 import { Session, User } from '@supabase/supabase-js';
-import { supabase } from '@/integrations/supabase/client';
+
+// Make Supabase optional for static deployment
+let supabase: any = null;
+try {
+  const { supabase: supabaseClient } = require('@/integrations/supabase/client');
+  supabase = supabaseClient;
+} catch (error) {
+  console.log('Supabase not available - running in static mode');
+}
 
 type AuthContextType = {
   session: Session | null;
@@ -18,6 +26,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    if (!supabase) {
+      // If Supabase is not available, just set loading to false
+      setIsLoading(false);
+      return;
+    }
+
     // Set up auth state listener FIRST
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, currentSession) => {
@@ -38,7 +52,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const signOut = async () => {
-    await supabase.auth.signOut();
+    if (supabase) {
+      await supabase.auth.signOut();
+    }
   };
 
   const value = {

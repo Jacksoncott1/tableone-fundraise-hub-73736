@@ -12,7 +12,14 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogAction } from '../ui/alert-dialog';
 
-import { supabase } from '@/integrations/supabase/client';
+// Make Supabase optional for static deployment
+let supabase: any = null;
+try {
+  const { supabase: supabaseClient } = require('@/integrations/supabase/client');
+  supabase = supabaseClient;
+} catch (error) {
+  console.log('Supabase not available - running in static mode');
+}
 
 interface InvestmentDialogProps {
   isOpen: boolean;
@@ -99,7 +106,7 @@ const InvestmentDialog: React.FC<InvestmentDialogProps> = ({
         
       // Check if this IP address has already submitted an interest
       let ipHasSubmitted = false;
-      if (ipAddress) {
+      if (ipAddress && supabase) {
         const { data: existingInterests, error: lookupError } = await supabase
           .from('investment_interests')
           .select('id')
@@ -133,17 +140,22 @@ const InvestmentDialog: React.FC<InvestmentDialogProps> = ({
       }
 
       // This is a new submission, proceed with storing in the database
-      const { error } = await supabase
-        .from('investment_interests')
-        .insert({
-          email: email,
-          investment_amount: amount,
-          ip_address: ipAddress  // Add the IP address to the database entry
-        });
+      if (supabase) {
+        const { error } = await supabase
+          .from('investment_interests')
+          .insert({
+            email: email,
+            investment_amount: amount,
+            ip_address: ipAddress  // Add the IP address to the database entry
+          });
 
-      if (error) {
-        console.error('Error saving investment interest:', error);
-        throw error;
+        if (error) {
+          console.error('Error saving investment interest:', error);
+          throw error;
+        }
+      } else {
+        // If Supabase is not available, just log the submission
+        console.log('Static mode: Investment interest submitted', { email, amount, ipAddress });
       }
 
       // Set the cookie after successful submission
