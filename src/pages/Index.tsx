@@ -30,7 +30,7 @@ const Index: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0 flex items-center">
               <img 
-                src="/src/assets/gambleai-logo.png" 
+                src="/gambleai-logo.png" 
                 alt="Gamble AI Logo" 
                 className="h-6 md:h-8 mr-2"
               />
