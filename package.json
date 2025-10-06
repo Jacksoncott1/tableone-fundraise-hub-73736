@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://jacksoncott1.github.io/tableone-fundraise-hub-73736",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

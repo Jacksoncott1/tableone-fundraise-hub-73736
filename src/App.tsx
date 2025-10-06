@@ -22,23 +22,21 @@ const App = () => (
       <AuthProvider>
         <Toaster />
         <Sonner />
-        <IPBlocker>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/resources" element={<Resources />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/investment-success" element={<InvestmentSuccess />} />
-              <Route path="/admin" element={
-                <ProtectedRoute>
-                  <Admin />
-                </ProtectedRoute>
-              } />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </IPBlocker>
+        <BrowserRouter basename="/tableone-fundraise-hub-73736">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/investment-success" element={<InvestmentSuccess />} />
+            <Route path="/admin" element={
+              <ProtectedRoute>
+                <Admin />
+              </ProtectedRoute>
+            } />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
       </AuthProvider>
     </TooltipProvider>
   </QueryClientProvider>
