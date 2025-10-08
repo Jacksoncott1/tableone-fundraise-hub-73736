@@ -1,35 +1,14 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ArrowDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import InvestmentDialog from './funding/InvestmentDialog';
-import RedirectDialog from './funding/RedirectDialog';
-
-import gambleAiHero from '../assets/gamble-ai-hero.png'
+import gambleAiHero from '../assets/gamble-ai-hero.png';
+import scienceBadge from '../assets/science-based-badge.png';
 
 const Hero: React.FC = () => {
-  const [isInvestmentDialogOpen, setIsInvestmentDialogOpen] = useState(false);
-  const [isRedirecting, setIsRedirecting] = useState(false);
-  
-  const handleInvestClick = () => {
-    setIsRedirecting(true);
-    setTimeout(() => {
-      window.open("https://wefunder.com/tableone", '_blank');
-      setIsRedirecting(false);
-    }, 1500);
-  };
 
   return (
     <section className="min-h-screen w-full flex flex-col justify-center items-center relative pt-16 pb-20">
-      <InvestmentDialog
-        isOpen={isInvestmentDialogOpen}
-        onOpenChange={setIsInvestmentDialogOpen}
-        setIsOpen={setIsInvestmentDialogOpen}
-      />
-      
-      <RedirectDialog isOpen={isRedirecting} />
-
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-blue-500/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple-500/10 rounded-full blur-[120px]" />
@@ -67,6 +46,14 @@ const Hero: React.FC = () => {
             >
               Download for iOS
             </a>
+          </div>
+
+          <div className="mb-16 opacity-0 animate-[fadeIn_0.8s_ease_forwards]" style={{ animationDelay: '1.0s' }}>
+            <img
+              src={scienceBadge}
+              alt="#1 Science-Based Gambling App"
+              className="h-48 md:h-56 lg:h-64 w-auto mx-auto drop-shadow-2xl"
+            />
           </div>
 
 

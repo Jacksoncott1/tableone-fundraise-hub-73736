@@ -1,22 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import InvestmentDialog from './funding/InvestmentDialog';
-import RedirectDialog from './funding/RedirectDialog';
 import gambleaiLogo from '@/assets/gambleai-logo.png';
 
 const NavBar: React.FC = () => {
-	const [isInvestmentDialogOpen, setIsInvestmentDialogOpen] = useState(false);
-	const [isRedirecting, setIsRedirecting] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
-
-	const handleInvestClick = () => {
-		setIsRedirecting(true);
-		setTimeout(() => {
-			window.open("https://wefunder.com/tableone", '_blank');
-			setIsRedirecting(false);
-		}, 1500);
-	};
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -51,15 +39,7 @@ const NavBar: React.FC = () => {
 		handle()
 	},[])
 
-	return (<>
-		<InvestmentDialog
-			isOpen={isInvestmentDialogOpen}
-			onOpenChange={setIsInvestmentDialogOpen}
-			setIsOpen={setIsInvestmentDialogOpen}
-		/>
-		
-		<RedirectDialog isOpen={isRedirecting} />
-
+	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 px-4 py-2.5 transition-all duration-500 ${scrolled ? 'glass backdrop-blur-lg bg-black/30 border-b border-white/5' : 'bg-transparent'
 			}`}>
 			<div className="container mx-auto flex justify-between items-center">
@@ -100,7 +80,6 @@ const NavBar: React.FC = () => {
 				</div>
 			</div>
 		</nav>
-	</>
 	);
 };
 

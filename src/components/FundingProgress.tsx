@@ -1,18 +1,7 @@
 
-import React, { useState } from 'react';
-import FundingUseCards from './funding/FundingUseCards';
-import RedirectDialog from './funding/RedirectDialog';
+import React from 'react';
 
 const FundingProgress: React.FC = () => {
-  const [isRedirecting, setIsRedirecting] = useState(false);
-  
-  const handleInvestClick = () => {
-    setIsRedirecting(true);
-    setTimeout(() => {
-      window.open("https://wefunder.com/tableone", '_blank');
-      setIsRedirecting(false);
-    }, 1500);
-  };
   
   return (
     <section id="invest" className="py-8 relative">
@@ -45,8 +34,6 @@ const FundingProgress: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      <RedirectDialog isOpen={isRedirecting} />
     </section>
   );
 };
