@@ -3,14 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import InvestmentDialog from './funding/InvestmentDialog';
 import RedirectDialog from './funding/RedirectDialog';
-import { useAuth } from '@/context/AuthContext';
-import { useLocation } from 'react-router-dom';
+import gambleaiLogo from '@/assets/gambleai-logo.png';
 
 const NavBar: React.FC = () => {
 	const [isInvestmentDialogOpen, setIsInvestmentDialogOpen] = useState(false);
 	const [isRedirecting, setIsRedirecting] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
-	const { user } = useAuth();
 
 	const handleInvestClick = () => {
 		setIsRedirecting(true);
@@ -67,7 +65,7 @@ const NavBar: React.FC = () => {
 			<div className="container mx-auto flex justify-between items-center">
 				<div className="flex items-center space-x-2">
 					<img
-						src="/src/assets/gambleai-logo.png"
+						src={gambleaiLogo}
 						alt="Gamble AI Logo"
 						className="h-4 md:h-5 transition-all duration-300 hover:opacity-80"
 					/>
