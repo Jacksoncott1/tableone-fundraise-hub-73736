@@ -1,7 +1,7 @@
-
 import React from 'react';
 import NavBar from '../components/NavBar';
 import { FileText, Video, Headphones, BookOpen, TrendingUp, Target } from 'lucide-react';
+import gambleaiLogo from '../assets/gambleai-logo.png'; // Import the logo
 
 interface ResourceCardProps {
   title: string;
@@ -280,7 +280,7 @@ const Resources: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0 flex items-center">
               <img 
-                src="/src/assets/gambleai-logo.png" 
+                src={gambleaiLogo}
                 alt="Gamble AI Logo" 
                 className="h-6 md:h-8 mr-2"
               />
